@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bold-Blade Graphic Designs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #000000, #1a0000, #4a0000, #8B1538);
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tagline {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .section-header {
+            padding: 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
+        }
+
+        .section-header:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .section-header h2 {
+            font-size: 2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-icon {
+            font-size: 1.5em;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown-icon.open {
+            transform: rotate(180deg);
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+            padding: 0 25px;
+        }
+
+        .section-content.open {
+            max-height: 1000px;
+            padding: 25px;
+        }
+
+        .service-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #fff;
+        }
+
+        .service-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .service-item p {
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .faq-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+            color: #FCD34D;
+        }
+
+        .faq-item p {
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .section-header h2 {
+                font-size: 1.5em;
+            }
+
+            .tagline {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bold-Blade Graphic Designs</h1>
+            <p class="tagline">Mastering logos, creative ideas, and bringing your vision to life!</p>
+            <div class="contact-info">
+                For more information: <a href="mailto:ezp628@gmail.com">ezp628@gmail.com</a>
+            </div>
+        </header>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('logos')">
+                <h2>🎨 Logos</h2>
+                <span class="dropdown-icon" id="logos-icon">▼</span>
+            </div>
+            <div class="section-content" id="logos-content">
+                <div class="service-item">
+                    <h3>Custom Logo Design</h3>
+                    <p>We create unique, memorable logos that capture your brand's essence and make a lasting impression on your audience.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Logo Redesign</h3>
+                    <p>Refresh your existing logo with a modern twist while maintaining brand recognition and loyalty.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Brand Identity Packages</h3>
+                    <p>Complete branding solutions including logo variations, color palettes, typography, and brand guidelines.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Logo Variations</h3>
+                    <p>Multiple formats and variations of your logo for different applications - from business cards to billboards.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('ideas')">
+                <h2>💡 Ideas & Consultation</h2>
+                <span class="dropdown-icon" id="ideas-icon">▼</span>
+            </div>
+            <div class="section-content" id="ideas-content">
+                <div class="service-item">
+                    <h3>Creative Brainstorming</h3>
+                    <p>Collaborative sessions to develop innovative concepts and visual strategies for your business.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Brand Strategy</h3>
+                    <p>Expert guidance on building a cohesive brand identity that resonates with your target audience.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Marketing Materials</h3>
+                    <p>Design concepts for business cards, flyers, social media graphics, and promotional materials.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Visual Consultation</h3>
+                    <p>Professional advice on color theory, typography, layout design, and visual communication strategies.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('questions')">
+                <h2>❓ FAQ</h2>
+                <span class="dropdown-icon" id="questions-icon">▼</span>
+            </div>
+            <div class="section-content" id="questions-content">
+                <div class="faq-item">
+                    <h3>How long does it take to create a logo?</h3>
+                    <p>Typically, custom logo projects take 1-2 weeks from initial consultation to final delivery, depending on complexity and revision rounds.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What formats will I receive my logo in?</h3>
+                    <p>You'll receive your logo in multiple formats including PNG, JPG, SVG, and PDF - suitable for both print and digital use.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer revisions?</h3>
+                    <p>Yes! We include multiple revision rounds in our packages to ensure you're completely satisfied with the final design.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What information do you need to get started?</h3>
+                    <p>We'll need details about your business, target audience, preferred styles, colors, and any specific ideas or inspirations you have in mind.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What are your rates?</h3>
+                    <p>Our pricing varies based on project scope and complexity. Contact us at ezp628@gmail.com for a personalized quote!</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 Bold-Blade Graphic Designs. All rights reserved.</p>
+            <p style="margin-top: 10px;">www.bold-blade.com</p>
+            <p style="margin-top: 10px;">Bringing bold ideas to life, one design at a time.</p>
+        </footer>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId + '-content');
+            const icon = document.getElementById(sectionId + '-icon');
+            
+            content.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
